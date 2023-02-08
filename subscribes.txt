@@ -1,2 +1,3 @@
 https://dmhy.b168.net/topics/rss/rss.xml?keyword=1080+%E7%AE%80&sort_id=0&team_id=650&order=date-desc
 https://dmhy.b168.net/topics/rss/rss.xml?keyword=1080+%E7%AE%80&sort_id=0&team_id=669&order=date-desc
+https://dmhy.b168.net/topics/rss/rss.xml?keyword=1080+%E7%AE%80&sort_id=0&team_id=822&order=date-desc
