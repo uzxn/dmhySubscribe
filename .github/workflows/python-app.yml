@@ -23,7 +23,7 @@ jobs:
         run: python3 ./subscribe.py
       - name: 'Git repo push'
         run: |
-          git config --global user.email "hzxhub@qq.com" && git config --global user.name "Zhixiang""
+          git config --global user.email "hzxhub@qq.com" && git config --global user.name "Zhixiang"
           git add .
           git commit -m "Auto update"
           git push origin main
