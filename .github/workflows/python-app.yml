@@ -1,6 +1,7 @@
 name: 'dmhySubscribe'
 
 on:
+  push:
   schedule:
     - cron: '0 22 * * *'
 
