@@ -11,6 +11,7 @@ with open("index.html", "w", encoding="utf-8") as page:
             page.write("<h1>Index of Subscribes</h1>\n")
             page.write(f"<a href='{soup.title.string}.html'>{soup.title.string}</a><br>\n")
             with open(f"{soup.title.string}.html", "w", encoding="utf-8") as f:
+                f.write("<meta name='viewport' content='width=device-width initial-scale=1'>")
                 f.write(f"<h1>{soup.title.string}</h1>\n")
                 for i in soup.select("item"):
                     f.write(f"{i.pubDate.string}\n")
