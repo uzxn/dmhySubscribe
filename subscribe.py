@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 with open("index.html", "w", encoding="utf-8") as page:
-    with open("subscribes.txt", "r"， encoding="utf-8") as sub:
+    with open("subscribes.txt", "r", encoding="utf-8") as sub:
         url = sub.readline()
         while url:
             text = requests.get(url).text
