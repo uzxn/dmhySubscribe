@@ -7,6 +7,7 @@ with open("index.html", "w", encoding="utf-8") as page:
         while url:
             text = requests.get(url).text
             soup = BeautifulSoup(text, "xml")
+            page.write("<meta name='viewport' content='width=device-width initial-scale=1'>")
             page.write("<h1>Index of Subscribes</h1>\n")
             page.write(f"<a href='{soup.title.string}.html'>{soup.title.string}</a><br>\n")
             with open(f"{soup.title.string}.html", "w", encoding="utf-8") as f:
