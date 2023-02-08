@@ -1,9 +1,8 @@
 name: 'dmhySubscribe'
 
 on:
-  push:
   schedule:
-    - cron: '28 12 * * *'
+    - cron: '36 12 * * *'
 
 permissions: write-all
 
