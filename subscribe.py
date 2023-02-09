@@ -11,10 +11,8 @@ with open("index.html", "w", encoding="utf-8") as page:
         url = sub.readline()
         while url:
             feed = feedparser.parse(url, agent="Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0")
-            raise NameError(str(feed))
-            pubdate = time.strftime('%Y-%m-%d %H:%M:%S', feed.feed.published_parsed)
             page.write("<tr>\n")
-            page.write(f"<th>{pubdate}</th>\n")
+            page.write(f"<th>{feed.feed.published}</th>\n")
             page.write(f"<th><a href='{feed.feed.title}.html'>{feed.feed.title}</a></th>\n")
             page.write("</tr>\n")
             with open(f"{feed.feed.title}.html", "w", encoding="utf-8") as f:
@@ -24,9 +22,8 @@ with open("index.html", "w", encoding="utf-8") as page:
                 f.write(f"<h1>{feed.feed.title}</h1>\n")
                 f.write("<table>\n")
                 for i in feed.entries:
-                    pubdate = time.strftime('%Y-%m-%d %H:%M:%S', i.published_parsed)
                     f.write("<tr>\n")
-                    f.write(f"<th>{pubDate}</th>\n")
+                    f.write(f"<th>{i.published}</th>\n")
                     f.write(f"<th><a href='{i.enclosures[0].href}'>{i.title}</a></th>\n")
                     f.write("</tr>\n")
                 f.write("</table>\n</main>")
