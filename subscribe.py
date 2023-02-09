@@ -8,8 +8,7 @@ with open("index.html", "w", encoding="utf-8") as page:
     page.write("<h1>Index of Subscribes</h1>\n")
     page.write("<table>\n")
     with open("subscribes.txt", "r", encoding="utf-8") as sub:
-        url = sub.readline()
-        while url:
+        for url in sub.readlines():
             feed = feedparser.parse(url, agent="Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0")
             page.write("<tr>\n")
             page.write(f"<th>{feed.feed.published}</th>\n")
@@ -27,5 +26,4 @@ with open("index.html", "w", encoding="utf-8") as page:
                     f.write(f"<th><a href='{i.enclosures[0].href}'>{i.title}</a></th>\n")
                     f.write("</tr>\n")
                 f.write("</table>\n</main>")
-        url = sub.readline()
     page.write("</table>\n</main>")
