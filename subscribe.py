@@ -9,7 +9,7 @@ with open("index.html", "w", encoding="utf-8") as page:
     page.write("<table>\n")
     with open("subscribes.txt", "r", encoding="utf-8") as sub:
         for url in sub.readlines():
-            feed = feedparser.parse(url, agent="Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0")
+            feed = feedparser.parse(url, agent="Mozilla/5.0 (Android 8.1.0; Mobile; rv:109.0) Gecko/109.0 Firefox/109.0")
             page.write("<tr>\n")
             page.write(f"<th>{feed.feed.published}</th>\n")
             page.write(f"<th><a href='{feed.feed.title}.html'>{feed.feed.title}</a></th>\n")
