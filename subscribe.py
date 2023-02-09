@@ -11,6 +11,7 @@ with open("index.html", "w", encoding="utf-8") as page:
         url = sub.readline()
         while url:
             feed = feedparser.parse(url, agent="Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0")
+            print(feed)
             pubdate = time.strftime('%Y-%m-%d %H:%M:%S', feed.feed.published_parsed)
             page.write("<tr>\n")
             page.write(f"<th>{pubdate}</th>\n")
