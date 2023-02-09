@@ -4,7 +4,7 @@ import feedparser
 with open("index.html", "w") as page:
     page.write("<meta name='viewport' content='width=device-width initial-scale=1'>\n")
     page.write("<link rel='stylesheet' href='https://unpkg.com/mvp.css@1.12/mvp.css'>\n")
-    page.write("<h3>Index of Subscribes</h3>\n")
+    page.write("<b>Index of Subscribes</b><br>\n")
     with open("subscribes.txt", "r") as sub:
         j = 0
         for url in sub.readlines():
