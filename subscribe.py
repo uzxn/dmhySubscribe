@@ -10,8 +10,8 @@ with open("index.html", "w") as page:
         for url in sub.readlines():
             j += 1
             feed = feedparser.parse(url, agent="Mozilla/5.0 (Android 8.1.0; Mobile; rv:109.0) Gecko/109.0 Firefox/109.0")
-            page.write(f"<a href={j}>{feed.feed.title}</a><br>\n")
-            with open(f"{j}", "w") as f:
+            page.write(f"<a href={j}.txt>{feed.feed.title}</a><br>\n")
+            with open(f"{j}.txt", "w") as f:
                 f.write(f"{feed.feed.title}\n\n")
                 for i in feed.entries:
                     f.write(f"{i.title}\n    {i.enclosures[0].href}\n\n")
