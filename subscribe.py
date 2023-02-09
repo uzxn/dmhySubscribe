@@ -11,7 +11,7 @@ with open("index.html", "w", encoding="utf-8") as page:
         for url in sub.readlines():
             feed = feedparser.parse(url, agent="Mozilla/5.0 (Android 8.1.0; Mobile; rv:109.0) Gecko/109.0 Firefox/109.0")
             page.write("<tr>\n")
-            page.write(f"<th>{time.strftime("%Y-%m-%d %H:%M:%S", feed.feed.published_parsed)}</th>\n")
+            page.write(f"<th>{time.strftime('%Y-%m-%d %H:%M:%S', feed.feed.published_parsed)}</th>\n")
             page.write(f"<th><a href='{feed.feed.title}.html'>{feed.feed.title}</a></th>\n")
             page.write("</tr>\n")
             with open(f"{feed.feed.title}.html", "w", encoding="utf-8") as f:
@@ -22,7 +22,7 @@ with open("index.html", "w", encoding="utf-8") as page:
                 f.write("<table>\n")
                 for i in feed.entries:
                     f.write("<tr>\n")
-                    f.write(f"<th>{time.strftime("%Y-%m-%d %H:%M:%S", i.published.parsed)}</th>\n")
+                    f.write(f"<th>{time.strftime('%Y-%m-%d %H:%M:%S', i.published.parsed)}</th>\n")
                     f.write(f"<th><a href='{i.enclosures[0].href}'>{i.title}</a></th>\n")
                     f.write("</tr>\n")
                 f.write("</table>\n</main>")
