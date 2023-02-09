@@ -10,7 +10,7 @@ with open("index.html", "w", encoding="utf-8") as page:
     with open("subscribes.txt", "r", encoding="utf-8") as sub:
         url = sub.readline()
         while url:
-            feed = feedparser.parse(url)
+            feed = feedparser.parse(url, agent="Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0")
             page.write("<tr>\n")
             page.write(f"<th>{time.strftime('%Y-%m-%d %H:%M:%S', feed.feed.published_parsed)}</th>\n")
             page.write(f"<th><a href='{feed.feed.title}.html'>{feed.feed.title}</a></th>\n")
