@@ -22,7 +22,7 @@ with open("index.html", "w", encoding="utf-8") as page:
                 f.write("<table>\n")
                 for i in feed.entries:
                     f.write("<tr>\n")
-                    f.write(f"<th>{time.strftime('%Y-%m-%d %H:%M:%S', i.published.parsed)}</th>\n")
+                    f.write(f"<th>{time.strftime('%Y-%m-%d %H:%M:%S', i.published_parsed)}</th>\n")
                     f.write(f"<th><a href='{i.enclosures[0].href}'>{i.title}</a></th>\n")
                     f.write("</tr>\n")
                 f.write("</table>\n</main>")
