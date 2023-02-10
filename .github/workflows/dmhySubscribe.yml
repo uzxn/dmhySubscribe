@@ -28,11 +28,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r ./requirements.txt
       - name: 'Run Python code'
-        run: python3 ./subscribe.py
+        run: python ./subscribe.py
       - name: 'Git repo push'
         run: |
           git config --global user.email hzxhub@qq.com
           git config --global user.name Zhixiang
           git add .
-          git commit -m "update by gh actions"
+          git commit -m "Update by Actions"
           git push -f origin main
