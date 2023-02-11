@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - './subscribes.txt'
+      - subscribes.txt
   schedule:
     - cron: '0 4 * * *'
     - cron: '0 10 * * *'
@@ -26,9 +26,9 @@ jobs:
       - name: 'Install dependencies'
         run: |
           python -m pip install --upgrade pip
-          pip install -r ./requirements.txt
+          pip install -r requirements.txt
       - name: 'Run Python code'
-        run: python ./subscribe.py
+        run: python subscribe.py
       - name: 'Git repo push'
         run: |
           git config --global user.email hzxhub@qq.com
