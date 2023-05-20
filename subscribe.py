@@ -16,7 +16,7 @@ with open("index.html", "w") as page:
                 f.write("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@ajusa/lit@latest/dist/lit.css'>\n")
                 f.write(f"<div class='c'><h1>{feed.feed.title}</h1>\n")
                 for i in feed.entries:
-                    f.write(f"<pre><code><a href='{i.enclosures[0].href}'>{i.title}</a>\n")
-                    f.write(f"{i.enclosures[0].href}</code></pre>\n")
+                    f.write(f"<a href='{i.enclosures[0].href}'>{i.title}</a><br>\n")
+                    # f.write(f"{i.enclosures[0].href}</code></pre>\n")
                 f.write("</div>")
     page.write("</div>")
