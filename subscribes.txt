@@ -1,4 +1,4 @@
-https://dmhy.abb.moe/topics/rss/team_id/669/rss.xml
-https://dmhy.abb.moe/topics/rss/team_id/822/rss.xml
-https://dmhy.abb.moe/topics/rss/team_id/650/rss.xml
-https://dmhy.abb.moe/topics/rss/team_id/657/rss.xml
+https://dmhy.abb.moe/topics/rss/rss.xml?keyword=%E6%88%91%E6%8E%A8+%E7%AE%80+1080&sort_id=2&team_id=303&order=date-desc
+https://dmhy.abb.moe/topics/rss/rss.xml?keyword=%E4%B9%85%E4%BF%9D%E5%90%8C%E5%AD%A6+%E7%AE%80%E6%97%A5+1080&sort_id=2&team_id=669&order=date-desc
+https://dmhy.abb.moe/topics/rss/rss.xml?keyword=MY+HOME+%E7%AE%80%E6%97%A5+1080&sort_id=2&team_id=669&order=date-desc
+https://dmhy.abb.moe/topics/rss/rss.xml?keyword=%E5%8B%87%E8%80%85%E6%AD%BB%E4%BA%86+%E7%8C%8E%E6%88%B7+%E7%AE%80%E4%B8%AD&sort_id=2&team_id=0&order=date-desc
